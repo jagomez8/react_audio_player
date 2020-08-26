@@ -1,0 +1,11 @@
+{
+  "name": "react-audio-player",
+  "version": "1.0.0",
+  "description": "HTML5 audio tag based music player wrap in react component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dalanke",
+  "license": "ISC"
+}
