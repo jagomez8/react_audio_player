@@ -1,5 +1,5 @@
 {
-  "name": "react-audio-player",
+  "name": "@dalanke/react-audio-player",
   "version": "1.0.0",
   "description": "HTML5 audio tag based music player wrap in react component",
   "repository": {

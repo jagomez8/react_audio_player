@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Player } from 'react-audio-player';
+import { Player } from '@dalanke/react-audio-player';
 
 const testPlaylist = {
   name: 'Temp Playlist',
