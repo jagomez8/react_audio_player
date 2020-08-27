@@ -3,9 +3,13 @@ This a React component based on HTML5 `<audio>` tag. It provides basic music pla
 
 ![image](readme_img/normal.png)
 
-![image](readme_img/mobile.png)
+[Click here for mobile screen shot](readme_img/mobile.png)
 
+This component has been used in project `Teatime music`, visit github repo to see detail:<br>
+https://github.com/Dalanke/youtube_audio_API
 
+Live demo can be access here:<br>
+https://stayhome-ui.herokuapp.com/
 
 ## Project structure
 
@@ -20,7 +24,7 @@ This a React component based on HTML5 `<audio>` tag. It provides basic music pla
 └── src
 ```
 * Source code located in `src`
-* Example are created by create-react-app, use `npm start` to start in local host (might need to link the package first)
+* Example are created by create-react-app, use `cd example && npm start` to start in local host (might need to link the package first)
 
 
 ## Usage
@@ -88,3 +92,9 @@ import { Player } from '@dalanke/react-audio-player';
 
 * `hide`: boolean, hide the player or not
 
+## Development
+
+* This component is styled with `react-bootstrap`
+* Each botton are separated into child component.
+* The `Player` component create a ref to `<audio>` tag, to access the `<audio>` element, use `this.audio.current`, see MDN docs for more info about `<audio>`:<br>
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
