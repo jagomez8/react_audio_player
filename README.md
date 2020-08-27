@@ -30,6 +30,10 @@ https://stayhome-ui.herokuapp.com/
 ## Usage
 
 ### Import
+```
+npm install @dalanke/react-audio-player 
+```
+
 ```JavaScript
 import { Player } from '@dalanke/react-audio-player';
 
