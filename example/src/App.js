@@ -51,7 +51,7 @@ class App extends React.Component {
     }
 
     // we need reset the current index after shuffle, pass the call back in here
-    this.setState({ playlist: { ...this.state.playlist, musics: copyList } });
+    this.setState({ playlist: { ...this.state.playlist, musics: copyList } }, callback);
   }
 
   // remove a song from current playlist
