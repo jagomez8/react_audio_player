@@ -53,3 +53,8 @@
 .timeDisplay {
   font-size: 0.9em;
 }
+
+.dropdown-menu {
+  background-color: #343b3f;
+  color: #fff;
+}

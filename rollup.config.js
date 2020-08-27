@@ -2,7 +2,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import image from '@rollup/plugin-image';
-import css from 'rollup-plugin-css-only';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: './src/index.js',
@@ -16,7 +16,7 @@ export default {
       exclude: "node_modules/**",
     }),
     nodeResolve(),
-    css({ output: './lib/bundle.css' }),
+    postcss(),
     image(),
     commonjs(),
   ],
