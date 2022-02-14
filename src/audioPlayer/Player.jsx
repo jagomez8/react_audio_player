@@ -359,57 +359,33 @@ class Player extends React.Component {
 
     return (
       <div className="player" style={this.props.hide ? { display: 'none' } : {}}>
+      
         <audio ref={this.audio}>
           <source src={src} />
         </audio>
 
-        <Container fluid>
-          <Row>
-            <Col sm={12} md={4}><Info nowPlaying={this.state.nowPlaying} /></Col>
-            <Col xs={12} md={4}>
-              <Container>
-                <Row>
-                  <Col style={{ paddingTop: "10px" }}>
-                    <div className="controlButton">
-                      <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
-                      <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
-                      <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
-                    </div>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col><TimeDisplay currentTime={currentTime} totalTime={totalTime} /></Col>
-                </Row>
-                <Row>
-                  <Col style={{ padding: 0, paddingBottom: "25px" }}>
-                    <ProgressBar
-                      currentTime={currentTime}
-                      totalTime={totalTime}
-                      buffered={buffered}
-                      onTimeUpdate={this.onTimeUpdate}
-                      onPlayheadClick={this.onPlayheadClick}
-                      onPlayheadMove={this.onPlayheadMove}
-                      onPlayheadRelease={this.onPlayheadRelease}
-                    />
-                  </Col>
-                </Row>
-              </Container>
-            </Col>
-            <Col sm={12} md={3}>
-              <Container>
-                <Row style={{ padding: "10px" }}>
-                  <Col><ModeChange mode={this.state.mode} onModeChange={this.onModeChange} /></Col>
-                  <Col><Playlist
-                    playlist={this.props.playlist}
-                    onMuiscSelect={this.onMuiscSelect}
-                    removeFromPlaylist={this.removeFromPlaylist}
-                  /></Col>
-                  <Col><VolumeBar volume={volume} onVolumeUpdate={this.onVolumeUpdate} /></Col>
-                </Row>
-              </Container>
-            </Col>
-          </Row>
-        </Container>
+
+        <Info nowPlaying={this.state.nowPlaying} />
+
+        <div className="controlButton">
+          <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
+          <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
+          <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
+        </div>
+
+        <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
+
+        <ProgressBar
+          currentTime={currentTime}
+          totalTime={totalTime}
+          buffered={buffered}
+          onTimeUpdate={this.onTimeUpdate}
+          onPlayheadClick={this.onPlayheadClick}
+          onPlayheadMove={this.onPlayheadMove}
+          onPlayheadRelease={this.onPlayheadRelease}
+        />
+
+
       </div>
     );
   }
