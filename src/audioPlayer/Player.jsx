@@ -363,12 +363,12 @@ class Player extends React.Component {
           <source src={src} />
         </audio>
 
-        <div classsName="thumb h-full basis-1/6">
+        <div className="thumb h-full basis-1/6">
           <img className="h-full object-cover" style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : ''} alt={this.state.nowPlaying.title}/>
         </div>
         <div className="controls-wrap flex flex-col basis-5/6">
           <div className="w-full flex">
-            <div className="">
+            <div className="test">
               <div>{this.state.nowPlaying.title}</div>
               <div>{this.state.nowPlaying.author}</div>
             </div>
@@ -391,7 +391,7 @@ class Player extends React.Component {
           />
 
           <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
-          
+
         </div>
 
       </div>
