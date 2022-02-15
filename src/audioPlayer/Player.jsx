@@ -363,17 +363,22 @@ class Player extends React.Component {
           <source src={src} />
         </audio>
 
-        <div classsName="thumb h-full">
-          <img style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : ''} alt={this.state.nowPlaying.title}/>
+        <div classsName="thumb h-full basis-1/6">
+          <img className="h-full object-cover" style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : ''} alt={this.state.nowPlaying.title}/>
         </div>
-        <div className="controls flex">
-          <div className="controlButton">
-            <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
-            <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
-            <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
-          </div>
+        <div className="controls-wrap flex flex-col basis-5/6">
+          <div className="w-full flex">
+            <div className="">
+              <div>{this.state.nowPlaying.title}</div>
+              <div>{this.state.nowPlaying.author}</div>
+            </div>
 
-          <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
+            <div className="controlButton">
+              <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
+              <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
+              <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
+            </div>
+          </div>
 
           <ProgressBar
             currentTime={currentTime}
@@ -384,6 +389,9 @@ class Player extends React.Component {
             onPlayheadMove={this.onPlayheadMove}
             onPlayheadRelease={this.onPlayheadRelease}
           />
+
+          <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
+          
         </div>
 
       </div>
