@@ -359,31 +359,47 @@ class Player extends React.Component {
 
     return (
       <div className="player" style={this.props.hide ? { display: 'none' } : {}}>
-      
+
         <audio ref={this.audio}>
           <source src={src} />
         </audio>
 
+        <div classsName="thumb h-full">
+          <img style ={ {height: '75px', width: '133px'}} src={nowPlaying.thumbnail? nowPlaying.thumbnail : defaultThumb} alt={nowPlaying.title}/>
+        </div>
+        <div className="controls">
+          <div className="controlButton">
+            <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
+            <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
+            <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
+          </div>
 
-        <Info nowPlaying={this.state.nowPlaying} />
+          <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
 
-        <div className="controlButton">
-          <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
-          <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
-          <NextButton enable={prevNextEnable} onNextClick={this.onNextClick} />
+          <ProgressBar
+            currentTime={currentTime}
+            totalTime={totalTime}
+            buffered={buffered}
+            onTimeUpdate={this.onTimeUpdate}
+            onPlayheadClick={this.onPlayheadClick}
+            onPlayheadMove={this.onPlayheadMove}
+            onPlayheadRelease={this.onPlayheadRelease}
+          />
         </div>
 
-        <TimeDisplay currentTime={currentTime} totalTime={totalTime} />
 
-        <ProgressBar
-          currentTime={currentTime}
-          totalTime={totalTime}
-          buffered={buffered}
-          onTimeUpdate={this.onTimeUpdate}
-          onPlayheadClick={this.onPlayheadClick}
-          onPlayheadMove={this.onPlayheadMove}
-          onPlayheadRelease={this.onPlayheadRelease}
-        />
+        {/*<div className="info">
+          <div className="thumbnail" >
+            <img style ={ {height: '75px', width: '133px'}} src={nowPlaying.thumbnail? nowPlaying.thumbnail : defaultThumb} alt={nowPlaying.title}/>
+          </div>
+          <div className="textInfo">
+            <div>{nowPlaying.title}</div>
+            <div>{nowPlaying.author}</div>
+          </div>
+        </div>*/}
+
+        {/*<Info nowPlaying={this.state.nowPlaying} />*/}
+
 
 
       </div>
