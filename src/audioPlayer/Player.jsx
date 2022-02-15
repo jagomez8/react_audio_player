@@ -365,7 +365,7 @@ class Player extends React.Component {
         </audio>
 
         <div classsName="thumb h-full">
-          <img style ={ {height: '75px', width: '133px'}} src={nowPlaying.thumbnail? nowPlaying.thumbnail : defaultThumb} alt={nowPlaying.title}/>
+          <img style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : defaultThumb} alt={this.state.nowPlaying.title}/>
         </div>
         <div className="controls">
           <div className="controlButton">
