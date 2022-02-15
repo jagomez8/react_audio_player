@@ -364,9 +364,9 @@ class Player extends React.Component {
         </audio>
 
         <div className="thumb h-full basis-1/6">
-          <img className="h-full object-cover" style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : ''} alt={this.state.nowPlaying.title}/>
+          <img className="h-full object-cover" style ={ width: '120px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : ''} alt={this.state.nowPlaying.title}/>
         </div>
-        <div className="controls-wrap flex flex-col basis-5/6">
+        <div className="mx-4 py-2 controls-wrap flex flex-col" style ={ width: '420px'}}>
           <div className="w-full flex">
             <div className="test">
               <div>{this.state.nowPlaying.title}</div>

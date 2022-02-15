@@ -4,8 +4,8 @@ function TimeDisplay (props) {
   const currentTime = getTime(props.currentTime);
   const totalTime = getTime(props.totalTime);
   return (
-    <div className="timeDisplay">
-      <span>{currentTime}/{totalTime}</span>
+    <div className="timeDisplay flex justify-between">
+      <span>{currentTime}<span> <span>{totalTime}</span>
     </div>
   );
 }

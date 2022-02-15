@@ -6,7 +6,7 @@ function NextButton(props) {
   const onNextClick = props.onNextClick;
 
   const style = {
-    height: '30px', width: '30px', backgroundSize: 'cover', opacity: '70%',
+    height: '26px', width: '26px', backgroundSize: 'cover', opacity: '70%',
     backgroundImage: `url(${nextIcon})`, 
   };
 

@@ -7,7 +7,7 @@ function PlayButton(props) {
   const isPlay = props.isPlay;
   const onPlayClick = props.onPlayClick;
   const style = {
-    height: '30px', width: '30px', backgroundSize: 'cover', opacity: '70%',
+    height: '26px', width: '26px', backgroundSize: 'cover', opacity: '70%',
   };
   if (isPlay) {
     style['backgroundImage'] = `url(${pauseIcon})`;
