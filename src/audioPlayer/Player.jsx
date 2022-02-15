@@ -359,7 +359,6 @@ class Player extends React.Component {
 
     return (
       <div className="player" style={this.props.hide ? { display: 'none' } : {}}>
-
         <audio ref={this.audio}>
           <source src={src} />
         </audio>
@@ -367,7 +366,7 @@ class Player extends React.Component {
         <div classsName="thumb h-full">
           <img style ={ {height: '75px', width: '133px'}} src={this.state.nowPlaying.thumbnail? this.state.nowPlaying.thumbnail : defaultThumb} alt={this.state.nowPlaying.title}/>
         </div>
-        <div className="controls">
+        <div className="controls flex">
           <div className="controlButton">
             <PrevButton enable={prevNextEnable} onPrevClick={this.onPrevClick} />
             <PlayButton onPlayClick={this.onPlayClick} isPlay={this.state.isPlay} />
@@ -386,21 +385,6 @@ class Player extends React.Component {
             onPlayheadRelease={this.onPlayheadRelease}
           />
         </div>
-
-
-        {/*<div className="info">
-          <div className="thumbnail" >
-            <img style ={ {height: '75px', width: '133px'}} src={nowPlaying.thumbnail? nowPlaying.thumbnail : defaultThumb} alt={nowPlaying.title}/>
-          </div>
-          <div className="textInfo">
-            <div>{nowPlaying.title}</div>
-            <div>{nowPlaying.author}</div>
-          </div>
-        </div>*/}
-
-        {/*<Info nowPlaying={this.state.nowPlaying} />*/}
-
-
 
       </div>
     );
